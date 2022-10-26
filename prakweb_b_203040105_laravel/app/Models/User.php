@@ -35,7 +35,7 @@ class User extends Authenticatable
 
     /**
      * The attributes that should be cast.
-     *
+     *rf1
      * @var array<string, string>
      */
     protected $casts = [
