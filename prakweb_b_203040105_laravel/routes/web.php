@@ -28,7 +28,23 @@ Route::get('/about', function () {
         "email" => "Rafliansyah@gamail.com",
         "image" => "rf.jpeg"
     ]);
-});
+}); 
 
-Route::get('/post', [PostController::class, 'index']);
-Route::get('post/{post:slug}', [PostController::class, 'show']);
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('posts/{slug}', [PostController::class, 'show']);
+
+// Route::get('/categories', function() {
+//     return view('categories', [
+//         'title' => 'Post Categories',
+//         'categories' => Category::all()
+//     ]);
+// });
+
+
+// Route::get('/categories/{category:slug}', function(Category $category){
+//     return view('category', [
+//         'title' => $category->name,
+//         'posts' => $category->posts,
+//         'category' => $category->name
+//     ]);
+//});
