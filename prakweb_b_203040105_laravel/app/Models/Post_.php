@@ -1,34 +1,31 @@
-<?php
+<?php 
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-
-class Post
-{
-   private static $blog_posts = [
+class Post {
+  private static $blog_posts = [
     [
-        "title" => "judul post pertama" , 
+        "title" => "Judul Post pertama",
         "slug" => "judul-post-pertama",
-        "author" => "Rafliansyah",
-        "body" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea blanditiis eaque quisquam, rem accusamus, excepturi placeat iusto omnis molestiae eius maxime ducimus exercitationem nisi sed quod consequuntur aut provident doloribus odit. Corporis explicabo libero deleniti animi in ab, quidem dignissimos quos cupiditate velit rem consequatur, accusantium delectus? Enim inventore tempora officiis. Esse sit pariatur ab numquam harum excepturi repudiandae quo doloribus quaerat est. Iusto iure quam dicta officiis nemo fugiat tempora eveniet ea consequatur, distinctio magni laudantium sit explicabo veritatis?"
+        "author" => "Zean",
+        "body" => "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cupiditate praesentium facere explicabo, maiores architecto adipisci reprehenderit nulla, consectetur ex magni labore nesciunt veniam exercitationem aliquid mollitia error, natus nam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cupiditate praesentium facere explicabo, maiores architecto adipisci reprehenderit nulla, consectetur ex magni labore nesciunt veniam exercitationem aliquid mollitia error, natus nam!Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> <p>Nostrum cupiditate praesentium facere explicabo, maiores architecto adipisci reprehenderit nulla, consectetur ex magni labore nesciunt veniam exercitationem aliquid mollitia error, natus nam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cupiditate praesentium facere explicabo, maiores architecto adipisci reprehenderit nulla, consectetur ex magni labore nesciunt veniam exercitationem aliquid mollitia error, natus nam!</p> "
     ],
     [
-        "title" => "judul post kedua" ,
-        "slug" => "judul-post-kedua", 
-        "author" => "farhan",
-        "body" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea blanditiis eaque quisquam, rem accusamus, excepturi placeat iusto omnis molestiae eius maxime ducimus exercitationem nisi sed quod consequuntur aut provident doloribus odit. Corporis explicabo libero deleniti animi in ab, quidem dignissimos quos cupiditate velit rem consequatur, accusantium delectus? Enim inventore tempora officiis. Esse sit pariatur ab numquam harum excepturi repudiandae quo doloribus quaerat est. Iusto iure quam dicta officiis nemo fugiat tempora eveniet ea consequatur, distinctio magni laudantium sit explicabo veritatis?"
-    ]
-];
+        "title" => "Judul Post Kedua",
+        "slug" => "judul-post-kedua",
+        "author" => "zeee",
+        "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cupiditate praesentium facere explicabo, maiores architecto adipisci reprehenderit nulla, consectetur ex magni labore nesciunt veniam exercitationem aliquid mollitia error, natus nam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cupiditate praesentium facere explicabo, maiores architecto adipisci reprehenderit nulla, consectetur ex magni labore nesciunt veniam exercitationem aliquid mollitia error, natus nam!"
+    ],
+  ];
 
-public static function all()
-{
-    return self::$blog_posts;
-}
-public static function find($slug)
-{
-    $posts=static::all();
-    return $posts->firstWhere('slug',$slug);
-}
+  public static function all() {
+    return collect(self::$blog_posts);
+  }
+
+  public static function find($slug) {
+    $posts = static::all();
+    return $posts->firstWhere('slug', $slug);
+  }
+
+
 }
