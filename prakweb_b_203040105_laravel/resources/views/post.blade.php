@@ -1,12 +1,11 @@
 @extends('layouts.main')
 
 @section('container')
+<h1 class="mb-5">{{ $post->title }}</h1>
 
 <div class="container">
     <div class="row justify-content-center mb-5">
        <div class="col-md-3">
-        <h1>{{ $post->title }}</h1>
-
         <p>
             By. 
             <a href="/authors/{{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a>
