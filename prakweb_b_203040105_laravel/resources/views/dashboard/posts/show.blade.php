@@ -22,7 +22,7 @@
          
       
       
-      <a href="/blog" class="text-decoration-none">back to posts</a>  
+      {{-- <a href="/blog" class="text-decoration-none">back to posts</a>   --}}
       </div>
   </div>
 </div>
