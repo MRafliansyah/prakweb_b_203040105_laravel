@@ -13,14 +13,14 @@ class PostController extends Controller
 
     $posts = Post::latest();
 
-    // $title = '';
-    // if(request('category')){
-    //   $category = Category::firsWhere('slug', request('category'));
-    // } 
-    // if(request('author')) {
-    //   $author = User::firsWhere('username', request('author'));
-    //   $title = 'by' . $author;
-    // }
+    $title = '';
+    if(request('category')){
+      $category ='in' . Category::firsWhere('slug', request('category'));
+    } 
+    if(request('author')) {
+      $author = User::firsWhere('username', request('author'));
+      $title = 'by' . $author;
+    }
 
     // dd(request('search'));
     return view('posts', [
